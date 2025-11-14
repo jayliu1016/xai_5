@@ -1,11 +1,11 @@
-# 🧠 Mechanistic Interpretability — Explaining a Tiny Brain  
+#  Mechanistic Interpretability — Explaining a Tiny Brain  
 **Author:** Jay Liu (Duke MIDS)  
 **Course:** AIPI-590 — Explainable AI  
 **Date:** November 2025  
 
 ---
 
-## 🌱 Overview
+##  Overview
 This mini project explores **mechanistic interpretability**—understanding what’s going on inside a neural network—through a tiny, self-contained example.  
 I trained a **small MLP** on a **3-bit parity task** and then investigated what each neuron seems to be doing.  
 
@@ -13,7 +13,7 @@ The story is part detective work, part narrative: what patterns appear inside th
 
 ---
 
-## ⚙️ Setup & Task
+##  Setup & Task
 
 - **Task:** Predict whether a 3-bit binary vector has an **odd** or **even** number of ones (the parity function).  
 - **Model:** Tiny MLP with one hidden layer of 4 neurons (`tanh` activation).  
@@ -23,7 +23,7 @@ Training takes **under 10 seconds** on CPU and achieves **100% accuracy** on all
 
 ---
 
-## 🔍 Exploration and Findings
+##  Exploration and Findings
 
 ### Step 1. Peeking Inside  
 I visualized:
@@ -41,7 +41,7 @@ The saliency was spread fairly evenly across all three input bits—matching int
 
 ---
 
-## 🧩 Mechanistic Hypothesis
+##  Mechanistic Hypothesis
 > “One hidden neuron acts as an **odd-parity detector** — flipping its sign in response to whether the number of ones is odd or even.”
 
 ### Evidence
@@ -56,7 +56,7 @@ The final linear layer recombines these features to output parity perfectly.
 
 ---
 
-## 💭 Reflection
+##  Reflection
 
 **What I learned:**  
 Even a “black box” as small as four neurons shows *structured, interpretable behavior*. By visualizing and perturbing, the abstract math becomes tangible.
@@ -78,18 +78,5 @@ I’d visualize *training evolution*—how correlations grow over epochs—and e
 
 ---
 
-## ✅ Submission Checklist
-
-- [x] Custom model and task  
-- [x] Internal inspection (weights, activations, ablation, saliency)  
-- [x] Mechanistic hypothesis with evidence  
-- [x] Reflection and interpretation  
-- [x] Google Colab + GitHub integration  
-
-**GitHub Repo:** [*add your repo link here*]  
-**Colab Notebook:** [*add your Colab share link here*]
-
----
-
-## 🧠 TL;DR Blog Summary
+##  TL;DR Blog Summary
 > “A 4-neuron MLP learned to compute parity — a nonlinear logic task — by evolving a neuron that behaves like a global parity switch. Mechanistic interpretability turns a math problem into a detective story: one neuron’s sign tells us whether the world has an odd number of ones.”
